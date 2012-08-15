@@ -63,6 +63,21 @@ In either case, you can use the command >
         :Helptags
 instead of |:helptags|, and let pathogen figure out the path for you.
 
+SAMPLE VIMRC FILES
+
+If you are new to vim (or have never bothered to configure it before) then you
+may want to use one of the supplied vimrc files.  You can copy one of them to
+$HOME/.vimrc (or $HOME/_vimrc on Windows:  see |vimrc|) or |:source| one of
+them from your own vimrc file.  If you already have a vimrc file, then you may
+want to copy some settings from these files.  See also |vimrc_example.vim|. >
+	vimrc_minimal.vim:  very basic
+	vimrc_standard.vim:  this will |:source| vimrc_example.vim
+	vimrc_timplunkett.vim:  this has many settings, with comments.
+When the vimrc project first started, it was one file, similar to
+vimrc_timplunkett.vim.  Now that the project contains many files, and some
+users are bothered by the original choices, we have moved these settings into
+this optional file.
+
 AUTOCOMPLETION IN .INFO FILES
 
 The drini (DRupal INI) filetype is used for .info and similar files.  The
