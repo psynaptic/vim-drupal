@@ -55,6 +55,13 @@ function s:OpenURL(base)
     else
       execute '!' . open . ' http://api.drupal.org/' . func
     endif
+  elseif a:base == 'drupalcontrib'
+    if strlen(b:Drupal_info.CORE)
+      execute '!' . open . ' http://drupalcontrib.org/api/search/' .
+      \ b:Drupal_info.CORE . '/' . func
+    else
+      execute '!' . open . ' http://drupalcontrib.org/' . func
+    endif
   else
     execute '!' . open . ' ' . a:base . func
   endif
@@ -68,6 +75,9 @@ if strlen(b:Drupal_info.OPEN_COMMAND)
 
   " Lookup the API docs for a drush function under cursor.
   nnoremap <buffer> <LocalLeader>dda :silent call <SID>OpenURL('http://api.drush.ws/api/function/')<CR><C-L>
+
+  " Lookup the API docs for a contrib module function under the cursor.
+  nnoremap <buffer> <LocalLeader>dc :silent call <SID>OpenURL('drupalcontrib')<CR><C-l>
 endif
 
 " Get the value of the drupal variable under cursor.
