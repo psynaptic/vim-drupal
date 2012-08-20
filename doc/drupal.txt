@@ -96,7 +96,7 @@ TODO:  There should be a way to install with drush.
 
 The file ftdetect/drupal.vim ensures that files with these extensions are
 recognized as PHP: >
-	.module, .php, .install, .inc, .profile, .theme, .engine, .test
+	.module, .php, .install, .inc, .profile, .theme, .engine, .test, .view
 and these are recognized as drini (DRupal INI) format: >
 	.info, .make, .build
 This assumes that you have |filetype| detection on.  See also |ftdetect|.
